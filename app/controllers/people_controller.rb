@@ -3,9 +3,7 @@ class PeopleController < ApplicationController
 
   def index
     @current_page = (params[:page] || 1).to_i
-    @people = @client.people(page: @current_page)
-    #response = token.get("/api/v1/people", :headers => standard_headers, :params => { page: @current_page })
-    #@people = JSON.parse(response.body)["results"].map { |person_data| Person.from_hash(person_data) }
+    @people = @client.people.list(page: @current_page)
   end
 
   def edit
@@ -39,9 +37,7 @@ class PeopleController < ApplicationController
   end
 
   def get_person(id)
-    response = token.get("/api/v1/people/#{id}", :headers => standard_headers)
-    hash = JSON.parse(response.body)["person"]
-    Person.from_hash(hash)
+    Person.from_hash(@client.people.find(id).to_hash)
   end
 
   def set_person(id, attributes)
