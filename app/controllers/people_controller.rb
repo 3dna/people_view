@@ -1,8 +1,11 @@
 class PeopleController < ApplicationController
+  before_filter :get_client
+
   def index
     @current_page = (params[:page] || 1).to_i
-    response = token.get("/api/v1/people", :headers => standard_headers, :params => { page: @current_page })
-    @people = JSON.parse(response.body)["results"].map { |person_data| Person.from_hash(person_data) }
+    @people = @client.people(page: @current_page)
+    #response = token.get("/api/v1/people", :headers => standard_headers, :params => { page: @current_page })
+    #@people = JSON.parse(response.body)["results"].map { |person_data| Person.from_hash(person_data) }
   end
 
   def edit
@@ -30,6 +33,10 @@ class PeopleController < ApplicationController
   end
 
   private
+
+  def get_client
+    @client = credential.api_client
+  end
 
   def get_person(id)
     response = token.get("/api/v1/people/#{id}", :headers => standard_headers)
