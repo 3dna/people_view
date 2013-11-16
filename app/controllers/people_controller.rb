@@ -37,7 +37,7 @@ class PeopleController < ApplicationController
   end
 
   def get_person(id)
-    Person.from_hash(@client.people.find(id).to_hash)
+    Person.from_hash(@client.people.find(id).to_hash.stringify_keys)
   end
 
   def set_person(id, attributes)
