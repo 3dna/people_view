@@ -1,9 +1,13 @@
 <%= currently_at :events %>
-<h1>Hi</h1>
+<h1>Events</h1>
 
 <p><strong>Size</strong>: <%= @events.size %></p>
 <ul>
 <% @events.each do |event| %>
-  <li><%= event.inspect %></li>
+  <li>
+    <h2><%= event.name %></h2>
+    <%= raw event.intro %>
+    <%= event.to_json %>
+  </li>
 <% end %>
 </ul>
