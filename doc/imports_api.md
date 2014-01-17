@@ -5,7 +5,7 @@ Create and run imports into your nation with this API.
 Create/Run Endpoint
 ---------------
 Use this endpoint to import into your nation. This will
-create and enqueue the import to run.
+create and enqueue the import to run. Each import should be 50mb or less - please chunk large files and use multiple calls.
 
 ```
 POST /api/v1/imports
