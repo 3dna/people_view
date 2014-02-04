@@ -42,8 +42,8 @@ GET https://foobar.nationbuilder.com/api/v1/people/9/capitals?page=1
   "results": [
     {
       "id": "3",
-      "person_id" => 9,
-      "author_id" => 4,
+      "person_id": 9,
+      "author_id": 4,
       "type": "Political Capital",
       "amount_in_cents": 500,
       "created_at": "2013-01-31T11:33:23-05:00",
