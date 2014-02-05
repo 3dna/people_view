@@ -117,3 +117,30 @@ DELETE https://foobar.nationbuilder.com/api/v1/webhooks
 ```
 
 Should remove the webhook and return an empty response with status code 204.
+
+Custom Fields
+-------------
+If [custom fields](http://nationbuilder.com/custom_fields) are set for your nation they will be included in the POST request body along with the other person or donation fields.
+
+### Example
+If, for example, your nation happened to care about the height of a person and you registered a custom field 'height' then it would be visible in the POST request body which gets sent to the URI defined for your registered webhook:
+
+```json
+{
+  "nation_slug": "foobar",
+  "payload": {
+    "signup": {
+      "nationbuilder_id": 85462,
+      "first_name": "John",
+      "last_name": "Doe",
+      "full_name": "John Doe",
+      "email1": "johndoe@example.com",
+
+      ...
+
+      "height": 72
+    }
+  },
+  "token": null
+}
+```
