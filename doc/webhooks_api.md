@@ -10,7 +10,7 @@ Use the webhooks API to manage callback requests that you wish to receive on the
 * Donation update - "donation_update"
 * Donation cancelation - "donation_cancellation"
 
-Each webhook instance has a single URL and event type, and will POST a message containing data about the person or donation created to the URL whenever the event occurs.
+Each webhook instance has a single URL and event type. A webhook sends an HTTP POST with a message body containing data about the person or donation created. The POST is sent to the URL whenever the event occurs.
 
 Index endpoint
 --------------
