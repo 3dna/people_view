@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 require 'nokogiri'
-require 'github/markup'
+require 'redcarpet'
 
 
 def preformatted_html
   file = ARGV.first
-  GitHub::Markup.render(file, File.read(file))
+  RedcarpetCompat.new(File.read(file), :fenced_code_blocks, :disable_indented_code_blocks).to_html
 end
 
 def doc
