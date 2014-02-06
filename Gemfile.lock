@@ -61,7 +61,6 @@ GEM
       formtastic (~> 2.2)
       railties (>= 3.1.0)
       sass-rails
-    github-markup (0.7.5)
     hike (1.2.1)
     httpauth (0.2.0)
     i18n (0.6.1)
@@ -162,7 +161,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   formtastic (~> 2.1)
   formtastic-plus-bootstrap
-  github-markup
   jquery-rails
   nokogiri
   oauth2
