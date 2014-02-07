@@ -193,10 +193,10 @@ Should respond with status code 200 and a body like this:
       "lat": null,
       "lng": null
     },
-    "home_address": null
+    "home_address": null,
+    “party”: null
   },
-  "precinct": null,
-  “party”: null
+  "precinct": null
 }
 ```
 
