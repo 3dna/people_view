@@ -121,7 +121,6 @@ GEM
     rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
-    redcarpet (3.0.0)
     sass (3.2.5)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -167,7 +166,6 @@ DEPENDENCIES
   pry
   pry-remote
   rails (= 3.2.11)
-  redcarpet
   sass-rails (~> 3.2.3)
   sqlite3
   twitter-bootstrap-rails
