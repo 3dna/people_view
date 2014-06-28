@@ -1,4 +1,4 @@
-ititEditor = ()->
+initEditor = ()->
   $input = $('input[name="api[body]"]')
   return unless $input.length > 0
 
@@ -15,4 +15,4 @@ ititEditor = ()->
 
 
 $ ()->
-  ititEditor()
+  initEditor()
